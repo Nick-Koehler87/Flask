@@ -1,0 +1,18 @@
+{% extends '_basic.html' %}
+{% block body %}
+
+    <nav>
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li>Registered students</li>
+    </ul>
+    </nav>
+    <div id = 'd'>
+        <ul class = 'registar'>
+            {% for Person in peps %}
+                <li class="registar">{{ Person.print() }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+{% endblock %}

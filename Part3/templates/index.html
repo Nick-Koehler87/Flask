@@ -1,0 +1,28 @@
+{% extends '_basic.html' %}
+{% block body %}
+
+    <nav>
+    <ul>
+        <li>Home</li>
+        <li><a href = '/register'>Registered students</a></li>
+    </ul>
+    </nav>
+    
+<div>
+<h1>Register here</h1>
+<p>use the folowing form to register</p>
+<form action="/submit" method="post">
+    <label for="name">Enter Name</label> <br>
+    <input type="text" id="name" name="name"><br><br>
+    <label for="org">Chose your organization</label><br>
+    <select name='org' id="org">
+        <option value="UNCC">UNCC</option>
+        <option value="NC State">NC State</option>
+        <option value="Chaple Hill">Chaple Hill</option>
+        <option value="COFM">COFM</option>
+        <option value="Looser socity">Looser socity</option>
+    </select><br><br>
+    <input type="submit" id="submit" name="submit">
+</form>
+</div>
+{% endblock %}
